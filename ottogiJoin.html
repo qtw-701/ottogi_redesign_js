@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>오뚜기-회원가입</title>
+    <!-- XEicon cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"
+    />
+    <link rel="stylesheet" href="css/join.css" />
+    <script type="module" src="js/header.js" defer></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <h1 class="header__logo">
+        <a href="index.html" class="header__logo__link">
+          <img src="images/OTG_logo_x4@4x.png" alt="오뚜기 메인 로고" />
+        </a>
+      </h1>
+      <ul class="header__items">
+        <li class="header__item">
+          <a href="ottogiLogin.html">
+            <i class="xi-user"></i>
+            <span class="header__item__text">로그인</span>
+          </a>
+        </li>
+        <li class="header__item">
+          <a href="#">
+            <i class="xi-call"></i>
+            <span class="header__item__text">고객센터</span>
+          </a>
+        </li>
+        <li class="header__item">
+          <a href="#">
+            <i class="xi-globus"></i>
+          </a>
+          <!-- <ul class="lang">
+            <li><a href="#">한국어</a></li>
+            <li><a href="#">ENGLISH</a></li>
+          </ul> -->
+        </li>
+      </ul>
+      <button class="header__toggle">
+        <i class="xi-bars"></i>
+      </button>
+      <nav class="header__nav nav__hide">
+        <button class="header__nav__close">
+          <i class="xi-close"></i>
+        </button>
+        <ul class="navbar__menus">
+          <li class="navbar__menu">
+            <h3 class="navbar__menu__title">회사소개</h3>
+            <ul class="navbar__sub-menus">
+              <li class="navbar__sub-menu"><a href="#">(주)오뚜기</a></li>
+              <li class="navbar__sub-menu"><a href="#">지속 가능 경영</a></li>
+              <li class="navbar__sub-menu"><a href="#">인재 채용</a></li>
+              <li class="navbar__sub-menu"><a href="#">사업장 소개</a></li>
+              <li class="navbar__sub-menu"><a href="#">찾아오시는 길</a></li>
+            </ul>
+          </li>
+          <li class="navbar__menu">
+            <h3 class="navbar__menu__title">제품정보</h3>
+            <ul class="navbar__sub-menus">
+              <li class="navbar__sub-menu"><a href="#">전체</a></li>
+              <li class="navbar__sub-menu"><a href="#">조미소스/식품</a></li>
+              <li class="navbar__sub-menu"><a href="#">분말/건조식품</a></li>
+              <li class="navbar__sub-menu"><a href="#">레토르트/간편식</a></li>
+              <li class="navbar__sub-menu"><a href="#">곡류가공식품</a></li>
+              <li class="navbar__sub-menu"><a href="#">농/축/수산식품</a></li>
+              <li class="navbar__sub-menu"><a href="#">다류</a></li>
+              <li class="navbar__sub-menu"><a href="#">식용유지</a></li>
+              <li class="navbar__sub-menu"><a href="#">향신료류</a></li>
+              <li class="navbar__sub-menu"><a href="#">라면류</a></li>
+              <li class="navbar__sub-menu"><a href="#">면류</a></li>
+              <li class="navbar__sub-menu"><a href="#">냉장/냉동식품</a></li>
+              <li class="navbar__sub-menu"><a href="#">라면스낵류</a></li>
+            </ul>
+          </li>
+          <li class="navbar__menu">
+            <h3 class="navbar__menu__title">쿠킹&스토리</h3>
+            <ul class="navbar__sub-menus">
+              <li class="navbar__sub-menu"><a href="#">전체</a></li>
+              <li class="navbar__sub-menu"><a href="#">한식</a></li>
+              <li class="navbar__sub-menu"><a href="#">양식</a></li>
+              <li class="navbar__sub-menu"><a href="#">중식</a></li>
+              <li class="navbar__sub-menu"><a href="#">일식</a></li>
+              <li class="navbar__sub-menu"><a href="#">퓨전</a></li>
+              <li class="navbar__sub-menu"><a href="#">카레</a></li>
+              <li class="navbar__sub-menu"><a href="#">사골곰탕</a></li>
+              <li class="navbar__sub-menu"><a href="#">마요네즈</a></li>
+            </ul>
+          </li>
+          <li class="navbar__menu">
+            <h3 class="navbar__menu__title">홍보센터</h3>
+            <ul class="navbar__sub-menus">
+              <li class="navbar__sub-menu"><a href="#">오뚜기 뉴스</a></li>
+              <li class="navbar__sub-menu"><a href="#">오뚜기 광고</a></li>
+              <li class="navbar__sub-menu"><a href="#">즐거운 오뚜기</a></li>
+              <li class="navbar__sub-menu">
+                <a href="#">카레 및 향신료 국제 심포지엄</a>
+              </li>
+              <li class="navbar__sub-menu"><a href="#">투자정보</a></li>
+              <li class="navbar__sub-menu">
+                <a href="#">오뚜기 창립 50주년</a>
+              </li>
+            </ul>
+          </li>
+          <li class="navbar__menu">
+            <h3 class="navbar__menu__title">고객서비스</h3>
+            <ul class="navbar__sub-menus">
+              <li class="navbar__sub-menu"><a href="#">고객 한마디</a></li>
+              <li class="navbar__sub-menu"><a href="#">공장 견학</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <!-- 서브메뉴 배경 -->
+        <div class="sub-bg"></div>
+      </nav>
+    </header>
+    <section class="section max-container">
+      <img
+        class="header__logo join__logo"
+        src="images/OTG_logo_x4@4x.png"
+        alt="오뚜기 로고"
+      />
+      <h2 class="join__title">회원가입</h2>
+
+      <form name="join-form">
+        <!-- 필드셋 1 -->
+        <fieldset>
+          <input
+            type="checkbox"
+            id="all"
+            name="all"
+            value="check-all"
+            class="check-all"
+          />
+          <label for="all">&nbsp;&nbsp;전체동의</label>
+        </fieldset>
+
+        <!-- 필드셋 2 -->
+        <fieldset>
+          <legend>이용약관 동의</legend>
+          <div class="join__box-container">
+            <div class="join-box">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi,
+              nostrum? Tempore iure beatae culpa explicabo illum ad. Unde quae
+              eius libero alias id ut maxime, nemo voluptatum voluptatem illo
+              dolore quis voluptate quam. Omnis quibusdam officia accusantium
+              aliquam eos voluptates, quidem architecto ducimus consequuntur
+              necessitatibus fugit, voluptatem ullam? Enim necessitatibus
+              aliquam optio beatae accusantium cumque nesciunt molestiae facere
+              eaque libero itaque minima voluptatum distinctio quam vitae illum
+              doloribus, quos vero deleniti aspernatur suscipit modi culpa ea.
+              Esse hic dicta ratione quisquam deserunt nobis. Ex impedit sequi
+              dolore autem illum eos facere minus mollitia architecto libero,
+              magni repellendus nobis quod id placeat accusamus iure quasi
+              aperiam unde ipsum dicta et odit totam laudantium! Voluptate
+              blanditiis nihil expedita a. Porro molestiae soluta esse dolorum
+              iure fuga qui laboriosam perspiciatis autem ut? Dolorem explicabo
+              optio veritatis culpa, commodi illo molestiae repellendus fuga!
+              Dolor debitis nulla reiciendis delectus itaque quidem accusantium
+              numquam velit aliquid deleniti iusto dicta perspiciatis, harum
+              ducimus repudiandae eum libero suscipit placeat aspernatur autem
+              similique aperiam nisi quas. Nostrum eaque similique id ea in nemo
+              delectus consectetur numquam sed cupiditate iste, hic iure,
+              praesentium consequuntur, minima quisquam est rem! Doloribus,
+              deleniti recusandae reiciendis optio cum laudantium culpa
+              doloremque nostrum nihil aut nam natus. Maiores, minima veritatis.
+              Aliquid, minus! Iste commodi, vero omnis necessitatibus sunt
+              aliquam at qui dolore tenetur ea, corporis vel consectetur cum
+              dolorem ratione rerum illum repudiandae laudantium alias beatae.
+              Cum expedita obcaecati beatae dolores ratione mollitia! Est eum
+              inventore ipsa amet iusto laudantium harum voluptas dolorem
+              aliquam animi maxime vitae repellat, quos eius voluptatum,
+              similique asperiores a ex sequi, error molestiae perferendis! Qui,
+              aspernatur delectus numquam sint nihil nobis odit esse natus nemo
+              at error blanditiis cum, fuga maiores officia fugiat quas. Vitae
+              debitis ex quidem quasi, commodi, labore placeat nisi sapiente
+              reprehenderit quis expedita unde. Quibusdam minima alias esse
+              dolore ea tempore fugit, repudiandae, et eos nobis, laboriosam
+              quis nulla corporis impedit. Quo, ea? Cupiditate omnis error
+              quidem consequatur sint perferendis, a atque quae inventore
+              maxime, alias reprehenderit! Magni, sit, animi amet mollitia
+              labore porro, assumenda officiis aperiam atque laboriosam sed
+              dolorem voluptate sunt iusto praesentium perferendis nam illum
+              sequi enim. Cupiditate distinctio voluptas ratione suscipit, quasi
+              tenetur corporis ut quisquam hic magnam, veritatis perferendis
+              doloribus iure modi ad cum natus quibusdam provident unde at in?
+              Ab dolor itaque pariatur fugit cum aperiam quos eligendi facilis
+              iste iure odio accusamus esse consequuntur, ipsa, cumque sapiente
+              vitae error laborum? Veritatis quisquam libero fuga voluptates
+              atque dolores doloribus, qui alias cupiditate eius praesentium
+              fugit, amet aperiam tempora corrupti ipsum. Dignissimos ratione
+              laudantium autem quia, neque, voluptates facere ab animi modi
+              voluptatem sit qui dicta pariatur voluptas. Voluptas laudantium,
+              molestiae animi officiis cum soluta architecto deleniti facere
+              aperiam dolor iusto expedita adipisci quisquam dignissimos debitis
+              veritatis, sapiente atque numquam modi ipsa, ratione mollitia
+              temporibus unde quaerat? Eos repellat odit doloribus doloremque
+              sit error, beatae quaerat, laborum incidunt nisi voluptatum
+              ducimus rem praesentium voluptates! Odit quos quod odio hic, enim
+              maxime ab sapiente modi. Vel accusantium similique cumque autem
+              enim ratione.
+            </div>
+            <span class="form-btn">
+              <input
+                type="checkbox"
+                id="join_01_y"
+                name="join_01"
+                value="yes"
+                class="agree"
+              />
+              <label for="join_01_y">
+                &nbsp;(필수) 이용약관에 대한 내용을 확인 하였으며 이에
+                동의합니다.
+              </label>
+            </span>
+          </div>
+        </fieldset>
+
+        <!-- 필드셋 3 -->
+        <fieldset>
+          <legend>개인정보 수집 및 이용</legend>
+          <div class="join__box-container">
+            <div class="join-box">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi,
+              nostrum? Tempore iure beatae culpa explicabo illum ad. Unde quae
+              eius libero alias id ut maxime, nemo voluptatum voluptatem illo
+              dolore quis voluptate quam. Omnis quibusdam officia accusantium
+              aliquam eos voluptates, quidem architecto ducimus consequuntur
+              necessitatibus fugit, voluptatem ullam? Enim necessitatibus
+              aliquam optio beatae accusantium cumque nesciunt molestiae facere
+              eaque libero itaque minima voluptatum distinctio quam vitae illum
+              doloribus, quos vero deleniti aspernatur suscipit modi culpa ea.
+              Esse hic dicta ratione quisquam deserunt nobis. Ex impedit sequi
+              dolore autem illum eos facere minus mollitia architecto libero,
+              magni repellendus nobis quod id placeat accusamus iure quasi
+              aperiam unde ipsum dicta et odit totam laudantium! Voluptate
+              blanditiis nihil expedita a. Porro molestiae soluta esse dolorum
+              iure fuga qui laboriosam perspiciatis autem ut? Dolorem explicabo
+              optio veritatis culpa, commodi illo molestiae repellendus fuga!
+              Dolor debitis nulla reiciendis delectus itaque quidem accusantium
+              numquam velit aliquid deleniti iusto dicta perspiciatis, harum
+              ducimus repudiandae eum libero suscipit placeat aspernatur autem
+              similique aperiam nisi quas. Nostrum eaque similique id ea in nemo
+              delectus consectetur numquam sed cupiditate iste, hic iure,
+              praesentium consequuntur, minima quisquam est rem! Doloribus,
+              deleniti recusandae reiciendis optio cum laudantium culpa
+              doloremque nostrum nihil aut nam natus. Maiores, minima veritatis.
+              Aliquid, minus! Iste commodi, vero omnis necessitatibus sunt
+              aliquam at qui dolore tenetur ea, corporis vel consectetur cum
+              dolorem ratione rerum illum repudiandae laudantium alias beatae.
+              Cum expedita obcaecati beatae dolores ratione mollitia! Est eum
+              inventore ipsa amet iusto laudantium harum voluptas dolorem
+              aliquam animi maxime vitae repellat, quos eius voluptatum,
+              similique asperiores a ex sequi, error molestiae perferendis! Qui,
+              aspernatur delectus numquam sint nihil nobis odit esse natus nemo
+              at error blanditiis cum, fuga maiores officia fugiat quas. Vitae
+              debitis ex quidem quasi, commodi, labore placeat nisi sapiente
+              reprehenderit quis expedita unde. Quibusdam minima alias esse
+              dolore ea tempore fugit, repudiandae, et eos nobis, laboriosam
+              quis nulla corporis impedit. Quo, ea? Cupiditate omnis error
+              quidem consequatur sint perferendis, a atque quae inventore
+              maxime, alias reprehenderit! Magni, sit, animi amet mollitia
+              labore porro, assumenda officiis aperiam atque laboriosam sed
+              dolorem voluptate sunt iusto praesentium perferendis nam illum
+              sequi enim. Cupiditate distinctio voluptas ratione suscipit, quasi
+              tenetur corporis ut quisquam hic magnam, veritatis perferendis
+              doloribus iure modi ad cum natus quibusdam provident unde at in?
+              Ab dolor itaque pariatur fugit cum aperiam quos eligendi facilis
+              iste iure odio accusamus esse consequuntur, ipsa, cumque sapiente
+              vitae error laborum? Veritatis quisquam libero fuga voluptates
+              atque dolores doloribus, qui alias cupiditate eius praesentium
+              fugit, amet aperiam tempora corrupti ipsum. Dignissimos ratione
+              laudantium autem quia, neque, voluptates facere ab animi modi
+              voluptatem sit qui dicta pariatur voluptas. Voluptas laudantium,
+              molestiae animi officiis cum soluta architecto deleniti facere
+              aperiam dolor iusto expedita adipisci quisquam dignissimos debitis
+              veritatis, sapiente atque numquam modi ipsa, ratione mollitia
+              temporibus unde quaerat? Eos repellat odit doloribus doloremque
+              sit error, beatae quaerat, laborum incidunt nisi voluptatum
+              ducimus rem praesentium voluptates! Odit quos quod odio hic, enim
+              maxime ab sapiente modi. Vel accusantium similique cumque autem
+              enim ratione.
+            </div>
+            <span class="form-btn">
+              <input
+                type="checkbox"
+                id="join_02_y"
+                name="join_02"
+                value="yes"
+                class="agree"
+              />
+              <label for="join_02_y">
+                &nbsp;(필수) 개인정보 수집 및 이용에 대한 내용을 확인 하였으며
+                이에 동의합니다.
+              </label>
+            </span>
+          </div>
+        </fieldset>
+
+        <!-- 필드셋 4 -->
+        <fieldset>
+          <legend>본인 인증방법 선택</legend>
+          <div class="join__btn-container">
+            <button class="join__btn">I-PIN 인증</button>
+            <button class="join__btn">휴대폰 인증</button>
+          </div>
+        </fieldset>
+      </form>
+    </section>
+    <footer id="footer">
+      <div class="max-container">
+        <ul class="footer__menus">
+          <li><a href="#">개인정보처리방침</a></li>
+          <li><a href="#">고객상담</a></li>
+          <li><a href="#">찾아오시는 길</a></li>
+          <li><a href="#">오뚜기몰</a></li>
+        </ul>
+        <div class="footer__bottom">
+          <p>
+            (주)오뚜기 | 사업자등록번호 : 138-81-03238 | 대표이사 이강훈<br />
+            주소 (14060) 경기도 안양시 동안구 흥안대로 405 (평촌동 160) | 오뚜기
+            고객상담실 : 080-024-2311<br />
+            오뚜기라면 고객상담실 : 080-088-1212 (월~금 08:30~17:30)<br />
+            Copyright ⓒ ottogi co.,Ltd All Rights Reserved.
+          </p>
+          <ul class="footer__sns__lists">
+            <li class="footer__sns__list">
+              <a href="#">
+                <i class="xi-instagram"></i>
+              </a>
+            </li>
+            <li class="footer__sns__list">
+              <a href="#">
+                <i class="xi-facebook"></i>
+              </a>
+            </li>
+            <li class="footer__sns__list">
+              <a href="#">
+                <img
+                  src="images/blog.png"
+                  alt="네이버 블로그"
+                  class="footer__sns__img"
+                />
+              </a>
+            </li>
+            <li class="footer__sns__list">
+              <a href="#">
+                <i class="xi-youtube-play"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <aside class="top__btn">
+      <a href="#" class="top-btn">TOP</a>
+    </aside>
+  </body>
+</html>

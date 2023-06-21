@@ -1,0 +1,37 @@
+@import 'style.css';
+.join__logo {
+  display: block;
+  margin: auto;
+}
+
+.join__title {
+  text-align: center;
+}
+
+fieldset {
+  border: none;
+  margin: 20px 0;
+}
+
+.join__box-container {
+  height: 300px;
+  background-color: #f5f5f5;
+  padding: 20px;
+  overflow: scroll;
+}
+
+.join__btn-container {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.join__btn {
+  height: 37px;
+  padding: 0 20px;
+  background-color: var(--color-main-red);
+  color: var(--color-white);
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 37px;
+  margin: 0 10px;
+}

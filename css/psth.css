@@ -1,0 +1,15 @@
+@import 'style.css';
+.psth__info {
+  text-align: center;
+}
+
+.psth__info__title {
+  font-size: 30px;
+}
+
+.psth__info__img {
+  display: block;
+  width: 100%;
+  margin: auto;
+  padding: 0 20px;
+}

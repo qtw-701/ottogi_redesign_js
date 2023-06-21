@@ -1,0 +1,105 @@
+@import 'style.css';
+/* Common */
+input {
+  outline: none;
+  border: none;
+}
+
+.login__title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.login-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.login__sub-title {
+  margin: 10px 0;
+}
+
+#user-id,
+#m-name,
+#user-pw,
+#m-number {
+  width: 300px;
+  height: 35px;
+  background-color: var(--color-dark-white);
+  padding: 5px;
+}
+
+.submit__btn {
+  width: 72px;
+  height: 72px;
+  background-color: var(--color-main-red);
+  color: var(--color-white);
+  font-weight: bold;
+  border-radius: 100%;
+  margin-left: 10px;
+}
+
+#save-id + label {
+  font-size: 14px;
+}
+
+.login__lists {
+  width: 300px;
+}
+
+.login__list {
+  padding: 5px 0;
+}
+
+.login__list > a {
+  display: block;
+  height: 37px;
+  text-align: right;
+  line-height: 37px;
+  padding: 0 20px;
+}
+
+.naver {
+  background: url(../images/naverLogin.png) left/cover no-repeat;
+  color: var(--color-white);
+}
+
+.payco {
+  background: url(../images/paycoLogin.png) left/cover no-repeat;
+  color: var(--color-white);
+}
+
+.facebook {
+  background: url(../images/facebookLogin.png) left/cover no-repeat;
+  color: var(--color-white);
+}
+
+.kakao {
+  background: url(../images/kakaoLogin.png) left/cover no-repeat;
+  color: var(--color-black);
+}
+
+.login__menus,
+.m-text {
+  display: flex;
+  gap: 5px;
+  font-size: 13px;
+}
+
+@media screen and (max-width: 768px) {
+  .login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .login__left {
+    border-bottom: 1px solid var(--color-dark-white);
+    padding-bottom: 50px;
+  }
+
+  .login__right {
+    padding-top: 30px;
+  }
+}

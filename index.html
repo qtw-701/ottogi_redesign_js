@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ottogiMain</title>
+    <link rel="icon" href="images/OTG_logo_x4@4x.png" />
+
+    <!-- XEicon cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <!-- JavaScript -->
+    <script type="module" src="js/main.js" defer></script>
+    <script type="module" src="js/header.js" defer></script>
+  </head>
+
+  <body>
+    <!-- header -->
+    <header class="header">
+      <h1 class="header__logo">
+        <a href="index.html" class="header__logo__link">
+          <img src="images/OTG_logo_x4@4x.png" alt="오뚜기 메인 로고" />
+        </a>
+      </h1>
+      <ul class="header__items">
+        <li class="header__item">
+          <a href="ottogiLogin.html">
+            <i class="xi-user"></i>
+            <span class="header__item__text">로그인</span>
+          </a>
+        </li>
+        <li class="header__item">
+          <a href="#">
+            <i class="xi-call"></i>
+            <span class="header__item__text">고객센터</span>
+          </a>
+        </li>
+        <li class="header__item">
+          <a href="#">
+            <i class="xi-globus"></i>
+          </a>
+          <!-- <ul class="lang">
+            <li><a href="#">한국어</a></li>
+            <li><a href="#">ENGLISH</a></li>
+          </ul> -->
+        </li>
+      </ul>
+      <button class="header__toggle">
+        <i class="xi-bars"></i>
+      </button>
+      <nav class="header__nav nav__hide">
+        <button class="header__nav__close">
+          <i class="xi-close"></i>
+        </button>
+        <ul class="navbar__menus">
+          <li class="navbar__menu">
+            <h3 class="navbar__menu__title">회사소개</h3>
+            <ul class="navbar__sub-menus">
+              <li class="navbar__sub-menu"><a href="#">(주)오뚜기</a></li>
+              <li class="navbar__sub-menu"><a href="#">지속 가능 경영</a></li>
+              <li class="navbar__sub-menu"><a href="#">인재 채용</a></li>
+              <li class="navbar__sub-menu"><a href="#">사업장 소개</a></li>
+              <li class="navbar__sub-menu"><a href="#">찾아오시는 길</a></li>
+            </ul>
+          </li>
+          <li class="navbar__menu">
+            <h3 class="navbar__menu__title">제품정보</h3>
+            <ul class="navbar__sub-menus">
+              <li class="navbar__sub-menu"><a href="#">전체</a></li>
+              <li class="navbar__sub-menu"><a href="#">조미소스/식품</a></li>
+              <li class="navbar__sub-menu"><a href="#">분말/건조식품</a></li>
+              <li class="navbar__sub-menu"><a href="#">레토르트/간편식</a></li>
+              <li class="navbar__sub-menu"><a href="#">곡류가공식품</a></li>
+              <li class="navbar__sub-menu"><a href="#">농/축/수산식품</a></li>
+              <li class="navbar__sub-menu"><a href="#">다류</a></li>
+              <li class="navbar__sub-menu"><a href="#">식용유지</a></li>
+              <li class="navbar__sub-menu"><a href="#">향신료류</a></li>
+              <li class="navbar__sub-menu"><a href="#">라면류</a></li>
+              <li class="navbar__sub-menu"><a href="#">면류</a></li>
+              <li class="navbar__sub-menu"><a href="#">냉장/냉동식품</a></li>
+              <li class="navbar__sub-menu"><a href="#">라면스낵류</a></li>
+            </ul>
+          </li>
+          <li class="navbar__menu">
+            <h3 class="navbar__menu__title">쿠킹&스토리</h3>
+            <ul class="navbar__sub-menus">
+              <li class="navbar__sub-menu"><a href="#">전체</a></li>
+              <li class="navbar__sub-menu"><a href="#">한식</a></li>
+              <li class="navbar__sub-menu"><a href="#">양식</a></li>
+              <li class="navbar__sub-menu"><a href="#">중식</a></li>
+              <li class="navbar__sub-menu"><a href="#">일식</a></li>
+              <li class="navbar__sub-menu"><a href="#">퓨전</a></li>
+              <li class="navbar__sub-menu"><a href="#">카레</a></li>
+              <li class="navbar__sub-menu"><a href="#">사골곰탕</a></li>
+              <li class="navbar__sub-menu"><a href="#">마요네즈</a></li>
+            </ul>
+          </li>
+          <li class="navbar__menu">
+            <h3 class="navbar__menu__title">홍보센터</h3>
+            <ul class="navbar__sub-menus">
+              <li class="navbar__sub-menu"><a href="#">오뚜기 뉴스</a></li>
+              <li class="navbar__sub-menu"><a href="#">오뚜기 광고</a></li>
+              <li class="navbar__sub-menu"><a href="#">즐거운 오뚜기</a></li>
+              <li class="navbar__sub-menu">
+                <a href="#">카레 및 향신료 국제 심포지엄</a>
+              </li>
+              <li class="navbar__sub-menu"><a href="#">투자정보</a></li>
+              <li class="navbar__sub-menu">
+                <a href="#">오뚜기 창립 50주년</a>
+              </li>
+            </ul>
+          </li>
+          <li class="navbar__menu">
+            <h3 class="navbar__menu__title">고객서비스</h3>
+            <ul class="navbar__sub-menus">
+              <li class="navbar__sub-menu"><a href="#">고객 한마디</a></li>
+              <li class="navbar__sub-menu"><a href="#">공장 견학</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <!-- 서브메뉴 배경 -->
+        <div class="sub-bg"></div>
+      </nav>
+    </header>
+    <!-- main -->
+    <main>
+      <!-- slide -->
+      <section id="slide">
+        <!-- Slider main container -->
+        <div class="swiper slides">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper slides-container">
+            <!-- Slides -->
+            <div class="swiper-slide slide">
+              <a href="ottogi_psth.html">
+                <img
+                  class="slide__img"
+                  src="images/vs-psth.png"
+                  alt="피슈또핫 상세페이지 링크"
+                />
+              </a>
+            </div>
+            <div class="swiper-slide slide">
+              <a href="#">
+                <img
+                  class="slide__img"
+                  src="images/vs-lajojang.png"
+                  alt="라조장 상세페이지 링크"
+                />
+              </a>
+            </div>
+            <div class="swiper-slide slide">
+              <a href="#">
+                <img
+                  class="slide__img"
+                  src="images/vs-chaehwang.png"
+                  alt="채황 상세페이지 링크"
+                />
+              </a>
+            </div>
+            <div class="swiper-slide slide">
+              <a href="#">
+                <img
+                  class="slide__img"
+                  src="images/vs-jinbibim.png"
+                  alt="진비빔면 상세페이지 링크"
+                />
+              </a>
+            </div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination slide__pager"></div>
+        </div>
+        <button class="mall__btn">
+          오뚜기<span class="mall__btn--yellow">MAll</span>바로가기
+        </button>
+      </section>
+
+      <!-- products -->
+      <section id="products" class="section max-container">
+        <h2 class="section__title">OTTOGI&#39;S PRODUCTS</h2>
+
+        <div class="swiper products__slide-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide products">
+              <div class="product">
+                <a href="#">
+                  <img
+                    src="images/lajojang_new.png"
+                    alt="라조장 산초 이미지 링크"
+                    class="product__img"
+                  />
+                </a>
+                <h3 class="product__title">라조장 산초</h3>
+                <p class="product__description">
+                  신선한 기름에 산초, 고추 등을 볶아 만든 중화풍
+                  고추기름소스입니다.
+                </p>
+                <div class="new">NEW</div>
+              </div>
+              <div class="product">
+                <a href="#">
+                  <img
+                    src="images/buk_new.png"
+                    alt="북엇국라면 용기 이미지 링크"
+                    class="product__img"
+                  />
+                </a>
+                <h3 class="product__title">북엇국라면 용기</h3>
+                <p class="product__description">
+                  풍부한 북어 구성으로 <br />
+                  담백하고 진한 풍미를 담았습니다.
+                </p>
+                <div class="new">NEW</div>
+              </div>
+              <div class="product">
+                <a href="#">
+                  <img
+                    src="images//tabasco.png"
+                    alt="타바스코 스리라차 이미지 링크"
+                    class="product__img"
+                  />
+                </a>
+                <h3 class="product__title">타바스코 스리라차</h3>
+                <p class="product__description">
+                  전세계 N0.1 타바스코 핫소스를 사용하여 깔끔한 매콤함
+                </p>
+                <img
+                  src="images/hit_image.png"
+                  alt="히트 상품 아이콘"
+                  class="hit"
+                />
+              </div>
+              <div class="product">
+                <a href="#">
+                  <img
+                    src="images//jin_hot.png"
+                    alt="진라면 매운맛 이미지 링크"
+                    class="product__img"
+                  />
+                </a>
+                <h3 class="product__title">진라면 매운맛</h3>
+                <p class="product__description">
+                  쫄깃하고 찰기있는 면에 사골국물과 숙성된 매운맛이 조화된
+                  진하고 얼큰한 맛
+                </p>
+                <img
+                  src="images/hit_image.png"
+                  alt="히트 상품 아이콘"
+                  class="hit"
+                />
+              </div>
+            </div>
+            <div class="swiper-slide products">
+              <div class="product">
+                <a href="#">
+                  <img
+                    src="images//busanGukbab.png"
+                    alt="부산식 돼지국밥 이미지 링크"
+                    class="product__img"
+                  />
+                </a>
+                <h3 class="product__title">부산식 돼지국밥</h3>
+                <p class="product__description">
+                  정통 부산식 돼지국밥의 개성을 잘 담은 제품
+                </p>
+                <img
+                  src="images/hit_image.png"
+                  alt="히트 상품 아이콘"
+                  class="hit"
+                />
+              </div>
+              <div class="product">
+                <a href="#">
+                  <img
+                    src="images/beafpower.png"
+                    alt="쇠고기 보양탕 이미지 링크"
+                    class="product__img"
+                  />
+                </a>
+                <h3 class="product__title">쇠고기 보양탕</h3>
+                <p class="product__description">
+                  쇠고기와 각종 보양재료를 된장베이스의 진한 국물로 우려낸
+                  서울식 보양탕 요리
+                </p>
+                <img
+                  src="images/hit_image.png"
+                  alt="히트 상품 아이콘"
+                  class="hit"
+                />
+              </div>
+              <div class="product">
+                <a href="#">
+                  <img
+                    src="images//mushroomsoup.png"
+                    alt="양송이 크림스프 이미지 링크"
+                    class="product__img"
+                  />
+                </a>
+                <h3 class="product__title">양송이 크림스프</h3>
+                <p class="product__description">
+                  양송이와 크림을 듬뿍 넣은 스프계의 스테디셀러 양송이 18%로
+                  건강한 한끼
+                </p>
+                <img
+                  src="images/hit_image.png"
+                  alt="히트 상품 아이콘"
+                  class="hit"
+                />
+              </div>
+              <div class="product">
+                <a href="#">
+                  <img
+                    src="images/curry-kid.png"
+                    alt="어린이 카레 이미지 링크"
+                    class="product__img"
+                  />
+                </a>
+                <h3 class="product__title">어린이 카레</h3>
+                <p class="product__description">
+                  성장기 자녀에게 도움을 주는 칼슘, DHA를 넣은 건강한 어린이
+                  카레
+                </p>
+                <img
+                  src="images/hit_image.png"
+                  alt="히트 상품 아이콘"
+                  class="hit"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </section>
+
+      <!-- news -->
+      <section id="news" class="section">
+        <div class="max-container">
+          <ul class="news__items">
+            <li class="news__item">
+              <a href="#">
+                <img
+                  src="images/coldnoodle.png"
+                  alt="초계메밀냉면 이미지"
+                  class="news__item__img"
+                />
+              </a>
+            </li>
+            <li class="news__item">
+              <a href="#">
+                <img
+                  src="images/o_info.png"
+                  alt="오뚜기는 보다 좋은 품질 보다 높은 영양 보다 앞선 식품을 위해 최선을 다하고 있습니다."
+                  class="news__item__img"
+                />
+              </a>
+            </li>
+          </ul>
+          <ul class="news__items bottom">
+            <li class="news__item whats-new">
+              <h2 class="section__title">WHAT&#39;S NEW</h2>
+              <ul class="news__lists">
+                <li class="news__list">
+                  <a href="#"> 스위트홈 오뚜기 가족요리 페스티발 연기 안내 </a>
+                </li>
+                <li class="news__list">
+                  <a href="#">제18회 서울디자인 페스티벌 참가</a>
+                </li>
+                <li class="news__list">
+                  <a href="#">
+                    오뚜기의 사랑으로, 새 생명 5,000명 탄생 기념행사
+                  </a>
+                </li>
+                <li class="news__list">
+                  <a href="#">제5회 서울국제음식영화제 후원</a>
+                </li>
+                <li class="news__list">
+                  <a href="#">&nbsp;&nbsp;&nbsp;more</a>
+                </li>
+              </ul>
+            </li>
+            <li class="news__item">
+              <a href="#">
+                <img
+                  src="images/event.jpg"
+                  alt="카레 및 향신료 국제 심포지엄 포스터 이미지"
+                  class="news__item__img"
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- sns -->
+      <section class="section max-container">
+        <h2 class="section__title">OTTOGI&#39;S SNS</h2>
+        <ul class="sns__categories">
+          <li>
+            <button class="sns__category selected" data-category="daily">
+              오뚜기 데일리
+            </button>
+          </li>
+          <li>
+            <button class="sns__category" data-category="today">
+              오늘, 맛으로 행복한 세상
+            </button>
+          </li>
+          <li>
+            <button class="sns__category" data-category="tabasco">
+              타바스코 코리아
+            </button>
+          </li>
+        </ul>
+        <ul class="sns__lists">
+          <li class="sns__list" data-type="daily">
+            <a href="#">
+              <img src="images/o_sns01.jpg" alt="메밀국수 레시피" />
+              <div class="sns__metadata">
+                <i class="xi-heart"></i>
+                <span>999</span>
+                <i class="xi-speech"></i>
+                <span>999</span>
+              </div>
+            </a>
+            <p>
+              <a href="#">
+                이 날씨에 어울리는 시원한<br />
+                메밀 레시피 소개 드림돠!
+              </a>
+            </p>
+          </li>
+          <li class="sns__list" data-type="daily">
+            <a href="#">
+              <img src="images/o_sns02.jpg" alt="오뚜기 브랜드 라이브 절" />
+              <div class="sns__metadata">
+                <i class="xi-heart"></i>
+                <span>999</span>
+                <i class="xi-speech"></i>
+                <span>999</span>
+              </div>
+            </a>
+            <p>
+              <a href="#">
+                오뚜기X그립 슬기로운 살림 쇼핑<br />
+                저.세.상.텐.션. 6인방이 오뚜기와 뭉쳤어욧!
+              </a>
+            </p>
+          </li>
+          <li class="sns__list" data-type="daily">
+            <a href="#" class="sns-img">
+              <img src="images/o_sns03.jpg" alt="오뚜기와 젠제로 콜라보" />
+              <div class="sns__metadata">
+                <i class="xi-heart"></i>
+                <span>999</span>
+                <i class="xi-speech"></i>
+                <span>999</span>
+              </div>
+            </a>
+            <p>
+              <a href="#">
+                오뚜기X젠제로 Event 젤라또맛집<br />
+                젠제로와 오뚜기가 만났어요!
+              </a>
+            </p>
+          </li>
+          <li class="sns__list" data-type="daily">
+            <a href="#" class="sns-img">
+              <img src="images/o_sns04.jpg" alt="오뚜기 생일밥상 세트" />
+              <div class="sns__metadata">
+                <i class="xi-heart"></i>
+                <span>999</span>
+                <i class="xi-speech"></i>
+                <span>999</span>
+              </div>
+            </a>
+            <p>
+              <a href="#">
+                생일만 즐기세요! 생일밥상은<br />
+                제가 맡을게욧!
+              </a>
+            </p>
+          </li>
+          <li class="sns__list" data-type="today">
+            <a href="#" class="sns-img2">
+              <img src="images/o_sns3-1.jpg" alt="대밥사건 밥심챌린지 참여" />
+              <div class="sns__metadata">
+                <i class="xi-heart"></i>
+                <span>999</span>
+                <i class="xi-speech"></i>
+                <span>999</span>
+              </div>
+            </a>
+            <p>
+              <a href="#">
+                대밥사건!<br />오뚜기 컵밥으로 밥심 20% 채워볼래?
+              </a>
+            </p>
+          </li>
+          <li class="sns__list" data-type="today">
+            <a href="#" class="sns-img2">
+              <img src="images/o_sns3-2.jpg" alt="참깨라면 볶음밥 레시피" />
+              <div class="sns__metadata">
+                <i class="xi-heart"></i>
+                <span>999</span>
+
+                <i class="xi-speech"></i>
+                <span>999</span>
+              </div>
+            </a>
+            <p>
+              <a href="#"> 핫한 건 다 하고 싶은 욕심쟁이 등-장! </a>
+            </p>
+          </li>
+          <li class="sns__list" data-type="today">
+            <a href="#" class="sns-img2">
+              <img
+                src="images/o_sns3-3.jpg"
+                alt="백사부의 진라면 맛있게 먹는 방법 대공기"
+              />
+              <div class="sns__metadata">
+                <i class="xi-heart"></i>
+                <span>999</span>
+                <i class="xi-speech"></i>
+                <span>999</span>
+              </div>
+            </a>
+            <p>
+              <a href="#">
+                진라면 맛있게 먹는 방법 대공개!<br />
+                백사부님만의 찐 레시피는 무엇인가용?
+              </a>
+            </p>
+          </li>
+          <li class="sns__list" data-type="today">
+            <a href="#" class="sns-img2">
+              <img src="images/o_sns3-4.jpg" alt="한 주의 시작은 밥심" />
+              <div class="sns__metadata">
+                <i class="xi-heart"></i>
+                <span>999</span>
+                <i class="xi-speech"></i>
+                <span>999</span>
+              </div>
+            </a>
+            <p>
+              <a href="#"> 한 주의 시작은 밥심으로 확-실하게! </a>
+            </p>
+          </li>
+          <li class="sns__list" data-type="tabasco">
+            <a href="#">
+              <img src="images/o_sns2-1.jpg" alt="갈릭버터크로플 레시피" />
+              <div class="sns__metadata">
+                <i class="xi-heart"></i>
+                <span>999</span>
+                <i class="xi-speech"></i>
+                <span>999</span>
+              </div>
+            </a>
+            <p>
+              <a href="#">지쳐가는 목요일엔 크로플로 에너지 충전!</a>
+            </p>
+          </li>
+          <li class="sns__list" data-type="tabasco">
+            <a href="#">
+              <img src="images/o_sns2-2.jpg" alt="tabasco vlog" />
+              <div class="sns__metadata">
+                <i class="xi-heart"></i>
+                <span>999</span>
+                <i class="xi-speech"></i>
+                <span>999</span>
+              </div>
+            </a>
+            <p>
+              <a href="#">나시고랭과 치킨른당 맛집 연남동 발리문</a>
+            </p>
+          </li>
+          <li class="sns__list" data-type="tabasco">
+            <a href="#" class="sns-img3">
+              <img src="images/o_sns2-3.jpg" alt="타바스코 시식권 이벤트" />
+              <div class="sns__metadata">
+                <i class="xi-heart"></i>
+                <span>999</span>
+                <i class="xi-speech"></i>
+                <span>999</span>
+              </div>
+            </a>
+            <p>
+              <a href="#">
+                [시식권 이벤트] 홈메이드 라자냐 맛집<br />
+                연남동 파이부 라자냐에는 역시 타바스코
+              </a>
+            </p>
+          </li>
+          <li class="sns__list" data-type="tabasco">
+            <a href="#" class="sns-img3">
+              <img src="images/o_sns2-4.jpg" alt="tabasco" />
+              <div class="sns__metadata">
+                <i class="xi-heart"></i>
+                <span>999</span>
+
+                <i class="xi-speech"></i>
+                <span>999</span>
+              </div>
+            </a>
+            <p>
+              <a href="#">이건 모두가 깜짝 놀랄 수밖에 없는 비주얼</a>
+            </p>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer id="footer">
+      <div class="max-container">
+        <ul class="footer__menus">
+          <li><a href="#">개인정보처리방침</a></li>
+          <li><a href="#">고객상담</a></li>
+          <li><a href="#">찾아오시는 길</a></li>
+          <li><a href="#">오뚜기몰</a></li>
+        </ul>
+        <div class="footer__bottom">
+          <p>
+            (주)오뚜기 | 사업자등록번호 : 138-81-03238 | 대표이사 이강훈<br />
+            주소 (14060) 경기도 안양시 동안구 흥안대로 405 (평촌동 160) | 오뚜기
+            고객상담실 : 080-024-2311<br />
+            오뚜기라면 고객상담실 : 080-088-1212 (월~금 08:30~17:30)<br />
+            Copyright ⓒ ottogi co.,Ltd All Rights Reserved.
+          </p>
+          <ul class="footer__sns__lists">
+            <li class="footer__sns__list">
+              <a href="#">
+                <i class="xi-instagram"></i>
+              </a>
+            </li>
+            <li class="footer__sns__list">
+              <a href="#">
+                <i class="xi-facebook"></i>
+              </a>
+            </li>
+            <li class="footer__sns__list">
+              <a href="#">
+                <img
+                  src="images/blog.png"
+                  alt="네이버 블로그"
+                  class="footer__sns__img"
+                />
+              </a>
+            </li>
+            <li class="footer__sns__list">
+              <a href="#">
+                <i class="xi-youtube-play"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <aside class="top__btn">
+      <a href="#" class="top-btn">TOP</a>
+    </aside>
+  </body>
+</html>
